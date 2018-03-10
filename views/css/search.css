@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,400,500,600&subset=cyrillic');
+
+html {
+	padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #ffc90e;
+    padding: 10px;
+}
+
+img {
+    float: right;
+}
+
+#site-title {
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 200;
+    font-size: 25px;
+}
+
+nav a {
+    font-weight: 500;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #232b2d;
+}
+
+nav ul {
+    padding: 0 !important;
+}
+
+li {
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #e67e00;
+}
+
+#content {
+    padding: 0 20px;
+}
+
+#search-title {
+    padding: 0 20px;
+    background: #f2f2f2;
+}
+
+.cont,
+.result {
+    padding: 10px;
+}
+
+.result {
+    margin: 0;
+}
+
+summary {
+	outline: 0;
+}
+
+summary span {
+	margin-left:-1.1em;
+    background: white;
+    cursor: pointer;
+    color: #e67e00;
+}
+
+.caption {
+    margin: 0;
+}
+
+.author {
+    margin: 0;
+    font-weight: 200i;
+}
+
+.date {
+    margin: 0;
+    font-weight: 200;
+}
+
+
+div.cont a {
+    text-decoration: none;
+    color: #232b2d;
+    font-weight: bold;    
+}
+
+div.cont a:hover {
+    color: #e67e00;
+}
+
+#submit {
+    cursor: pointer;
+}
+
+label {
+    cursor: pointer;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anastasia NEWS</title>
+    <link rel="stylesheet" href="/views/css/main.css">
+</head>
+<body>
+    <header>
+        <div id='site-title'>
+                <img src="/views/img/logo.jpg" width='256' height='100' alt="AnastasiaNEWS">
+                <h1>У нас только свежие новости</h1>
+        </div>
+        <nav>   
+                <ul>
+                    <li>
+                        <a href="/">Главная</a>
+                    </li>
+                    <li>
+                        <a href="/search">Поиск по новостям</a>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+    <div id='content'>
+% for n in news:
+        <div class='cont'>
+            <h2 class='caption'>{{n['caption']}}</h2>
+            <h4 class='author'>{{n['author']}}</h4>
+            <h5 class='date'>{{n['date']}}</h5>
+            <details>
+                <summary><span>Подробности</span></summary>
+                <p class='text'>{{n['text']}}</p>
+                <p>Полную информацию можно найти <a href="{{n['url']}}">здесь</a>.</p>
+            </details>
+        </div>
+% end
+    </div>
+    <footer>
+        <div class="cont">
+            <p>&copy; 2018 Anastasia Ovrova </p>
+        </div>
+    </footer>
+</body>
+</html>

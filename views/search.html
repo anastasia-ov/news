@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Anastasia NEWS</title>
+    <link rel="stylesheet" href="/views/css/search.css">
+    <style>
+        span.search {
+            color: white;
+            background: grey;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id='site-title'>
+                <img src="/views/img/logo.jpg" width='256' height='100' alt="AnastasiaNEWS">
+                <h1>У нас только свежие новости</h1>
+        </div>
+        <nav>   
+                <ul>
+                    <li>
+                        <a href="/">Главная</a>
+                    </li>
+                    <li>
+                        <a href="/search">Поиск по новостям</a>
+                    </li>
+                </ul>
+        </nav>
+    </header>
+    <div id='search-title'>
+        <div class='cont'>
+            <h1>Поиск по новостям</h1>
+            <form method='POST' action=''>
+                <table border='0'>
+                    <tr>
+                        <td><label for='query'>Что искать?</label></td>
+                        <td>
+                            <input type='text' id='query' name='query' value='{{query}}'>
+                        </td>
+                        <td><input id='submit' type='submit' value='Найти'></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    <div id='content'>
+    % if process:
+        % if len(result) > 0:
+            <p class='result'>Найдено результатов: {{len(result)}}</p>
+            % for item in result:
+                <div class='cont'>
+                    <h2 class='caption'>{{!item['caption']}}</h2>
+                    <h4 class='author'>{{!item['author']}}</h4>
+                    <h5 class='date'>{{!item['date']}}</h5>
+                    <p class='text'>{{!item['text']}}</p>
+                    <p>Полную информацию можно найти <a href="{{item['url']}}">здесь</a>.</p>
+                </div>
+            % end
+        % else:
+            <p class='result'>По запросу ничего не найдено</p>
+        % end
+    % end
+    </div>
+</body>
+</html>
